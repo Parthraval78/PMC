@@ -1,4 +1,4 @@
-package com.example.pmc.pmc;
+package com.ravalparth.pmc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
