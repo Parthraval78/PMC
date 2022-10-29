@@ -1,0 +1,32 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: pmc
+  application:
+    name: PMC Application
+  jackson:
+    default-property-inclusion: non_null
+  main:
+    banner-mode: "off"
+server:
+  error:
+    whitelabel:
+      enabled: false
+  port: 8080
+  servlet:
+    contextPath: /app
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      base-path: /
+      path-mapping.health: health
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+      group:
+        liveness.include: livenessState,ping
+        readiness.include: readinessState,diskSpace
