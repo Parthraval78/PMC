@@ -15,9 +15,9 @@
     <description>PMC</description>
     <properties>
         <java.version>19</java.version>
-        <maven.compiler.source>13</maven.compiler.source>
-        <maven.compiler.target>13</maven.compiler.target>
-        <base-package>com</base-package>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        <base-package>com/ravalparth</base-package>
     </properties>
     <dependencies>
         <dependency>
