@@ -16,17 +16,11 @@ server:
       enabled: false
   port: 8080
   servlet:
-    contextPath: /app
-management:
-  endpoints:
-    enabled-by-default: false
-    web:
-      base-path: /
-      path-mapping.health: health
-  endpoint:
-    health:
-      enabled: true
-      show-details: always
-      group:
-        liveness.include: livenessState,ping
-        readiness.include: readinessState,diskSpace
+    contextPath: /bill
+
+aws:
+  region: ap-south-1
+  dynamodb:
+    endpoint: https://dynamodb.ap-south-1.amazonaws.com
+    accessKey: AKIAQ4ZN5LSWDR6VHCQ6
+    secretKey: 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

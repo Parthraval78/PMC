@@ -18,22 +18,27 @@
         <maven.compiler.source>13</maven.compiler.source>
         <maven.compiler.target>13</maven.compiler.target>
         <base-package>com/ravalparth</base-package>
-
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <springdoc-openapi-ui.version>1.6.11</springdoc-openapi-ui.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -45,6 +50,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc-openapi-ui.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-dynamodb</artifactId>
+            <version>1.11.857</version>
+        </dependency>
+
     </dependencies>
 
     <build>
