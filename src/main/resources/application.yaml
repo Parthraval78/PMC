@@ -1,9 +1,4 @@
 spring:
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: pmc
   application:
     name: PMC Application
   jackson:
@@ -22,5 +17,5 @@ aws:
   region: ap-south-1
   dynamodb:
     endpoint: https://dynamodb.ap-south-1.amazonaws.com
-    accessKey: AKIAQ4ZN5LSWDR6VHCQ6
-    secretKey: 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
+    accessKey: AKIAQ4ZN5LSWHSB5B4JK
+    secretKey: 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
