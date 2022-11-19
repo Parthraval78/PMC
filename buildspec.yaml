@@ -7,7 +7,7 @@ phases:
       - mvn clean package
   post_build:
     commands:
-      - echo Build completed successfully
+      - echo Build completed successfully again
 artifacts:
   files:
     - target/PMC-1.0.0.jar
